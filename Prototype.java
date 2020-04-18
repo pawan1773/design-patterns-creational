@@ -11,8 +11,8 @@ public class Main
 		final List<String> otherEmployeesList = otherEmployees.getEmployeesList();
 		otherEmployeesList.add("Jogi");
 		
-		Employees anotherEmployees = (Employees)employees.clone();
-		List<String> anotherEmployeesList = anotherEmployees.getEmployeesList();
+		final Employees anotherEmployees = (Employees)employees.clone();
+		final List<String> anotherEmployeesList = anotherEmployees.getEmployeesList();
 		anotherEmployeesList.remove("Anu");
 		
 		System.out.println("Other employee list: " + otherEmployeesList);
@@ -46,7 +46,7 @@ class Employees implements Cloneable {
 	
 	@Override
 	public Object clone() throws CloneNotSupportedException {
-	    List<String> temp = new ArrayList<>();
+	    final List<String> temp = new ArrayList<>();
 	    for(final String employee: this.getEmployeesList()) {
 	        temp.add(employee);
 	    }
