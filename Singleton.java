@@ -28,8 +28,7 @@ public class Singleton {
         final BillPughSingleton ref10 = BillPughSingleton.getInstance();
         final BillPughSingleton ref11 = BillPughSingleton.getInstance();
         
-        System.out.println("BillPughSingleton => " + (ref10 == ref11));
-        
+        System.out.println("BillPughSingleton => " + (ref10 == ref11));        
     }
 }
 
